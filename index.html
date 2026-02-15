@@ -185,7 +185,24 @@
             </form>
         </div>
     </section>
+<script>
+    function enviarParaWhatsApp(event) {
+        event.preventDefault();
 
+        // --- ALTERE APENAS ESTA LINHA ABAIXO ---
+        var meuNumero = "25883988986"; // Seu número com 258 na frente
+        // --------------------------------------
+
+        var nome = document.getElementById('nome_cliente').value;
+        var interesse = document.getElementById('interesse_cliente').value;
+        
+        var mensagem = "Olá! Vi sua aula no Meu Negócio Online. Meu nome é " + nome + " e gostaria de saber mais sobre o pacote: " + interesse;
+        
+        var link = "https://api.whatsapp.com/send?phone=" + meuNumero + "&text=" + encodeURIComponent(mensagem);
+        
+        window.open(link, '_blank');
+    }
+</script>
     <footer class="bg-gray-900 text-gray-400 py-12 px-4 border-t border-gray-800">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
@@ -205,49 +222,7 @@
             &copy; 2026 Meu Negócio Online. Todos os direitos reservados.
         </div>
     </footer>
-<section id="contato" class="py-16 px-4 bg-white">
-    <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-6">Pronto para profissionalizar?</h2>
-        <div class="bg-gray-50 p-8 rounded-2xl shadow-inner border border-gray-200 text-left">
-            <form onsubmit="enviarParaWhatsApp(event)" class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Seu Nome</label>
-                    <input type="text" id="nome_cliente" required placeholder="Como gosta de ser chamado?" class="w-full mt-1 p-3 border rounded-md outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Qual pacote te interessou?</label>
-                    <select id="interesse_cliente" class="w-full mt-1 p-3 border rounded-md outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="Presença Ativa (5.000 MT)">Presença Ativa (5.000 MT)</option>
-                        <option value="Arranque Digital (2.500 MT)">Arranque Digital (2.500 MT)</option>
-                        <option value="Aceleração Total">Aceleração Total</option>
-                        <option value="Dúvida Geral">Tenho uma dúvida sobre a aula</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 rounded-md hover:bg-green-700 transition flex justify-center items-center gap-2">
-                    <i class="fab fa-whatsapp"></i> ENVIAR PEDIDO VIA WHATSAPP
-                </button>
-            </form>
-        </div>
-    </div>
 </section>
 
-<script>
-    function enviarParaWhatsApp(event) {
-        event.preventDefault();
-
-        // --- ALTERE APENAS ESTA LINHA ABAIXO ---
-        var meuNumero = "25883988986"; // Seu número com 258 na frente
-        // --------------------------------------
-
-        var nome = document.getElementById('nome_cliente').value;
-        var interesse = document.getElementById('interesse_cliente').value;
-        
-        var mensagem = "Olá! Vi sua aula no Meu Negócio Online. Meu nome é " + nome + " e gostaria de saber mais sobre o pacote: " + interesse;
-        
-        var link = "https://api.whatsapp.com/send?phone=" + meuNumero + "&text=" + encodeURIComponent(mensagem);
-        
-        window.open(link, '_blank');
-    }
-</script>
 </body>
 </html>
