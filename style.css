@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 0;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 100px 20px;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+.card, .price-card {
+  background: white;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.destaque {
+  border: 2px solid #2a5298;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: #e05500;
+}
+
+.btn-linkedin {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #0077b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  padding: 30px;
+  background: #222;
+  color: white;
+}
