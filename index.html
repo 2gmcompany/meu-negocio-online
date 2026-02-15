@@ -7,7 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .lesson-card:hover { transform: translateY(-5px); }
+        html { scroll-behavior: smooth; }
+        .lesson-card:hover { transform: translateY(-5px); transition: all 0.3s shadow; }
+        .pulse-btn { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { transform: scale(1.05); shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+            100% { transform: scale(1); shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
@@ -15,214 +22,185 @@
     <header class="bg-blue-900 text-white pt-20 pb-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <span class="bg-blue-800 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Conteúdo Educativo Gratuito</span>
-            <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-6">Por que seu negócio físico está invisível?</h1>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Você abriu as portas, investiu no espaço, mas os clientes não chegam. Nesta página, vou te ensinar <strong>exatamente</strong> o que você precisa fazer para existir na internet sem gastar com anúncios.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-6">Por que seu negócio físico está invisível na internet?</h1>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Você sabia que existem ferramentas profissionais gratuitas que o Google e o Facebook oferecem, mas 90% dos donos de negócios não sabem configurar?</p>
             <a href="#aula" class="inline-block bg-white text-blue-900 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition shadow-lg">
-                Começar a Aula <i class="fas fa-arrow-down ml-2"></i>
+                Começar Aula Grátis <i class="fas fa-arrow-down ml-2"></i>
             </a>
         </div>
     </header>
 
-    <section id="aula" class="py-16 px-4 max-w-5xl mx-auto">
-        <div class="mb-12 border-l-4 border-blue-600 pl-4">
-            <h2 class="text-3xl font-bold text-gray-900">Módulo 1: O Google é a sua nova fachada</h2>
-            <p class="mt-2 text-gray-600">Esqueça o panfleto por um minuto. Quando alguém precisa do que você vende, essa pessoa vai ao Google.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-sm lesson-card transition duration-300">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-map-marked-alt"></i></div>
-                <h3 class="text-xl font-bold mb-3">Google Perfil da Empresa (Antigo My Business)</h3>
-                <p class="text-gray-600 text-sm mb-4">
-                    Essa é a ferramenta mais poderosa e é <strong>GRÁTIS</strong>. Ela coloca sua loja no Google Maps e na pesquisa.
-                </p>
-                <div class="bg-blue-50 p-4 rounded-lg text-sm">
-                    <strong>O que você deve fazer:</strong>
-                    <ul class="list-disc ml-5 mt-2 space-y-1 text-gray-700">
-                        <li>Reivindicar sua empresa no Google.</li>
-                        <li>Preencher horário de funcionamento exato.</li>
-                        <li>Adicionar fotos reais (fachada, produtos, equipe).</li>
-                        <li>Pedir avaliações (reviews) aos seus clientes.</li>
+    <main id="aula" class="max-w-5xl mx-auto py-16 px-4">
+        
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">1</span>
+                <h2 class="text-3xl font-bold">O Google é a sua nova Fachada</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 lesson-card">
+                    <h3 class="font-bold text-xl mb-3 text-blue-700">Google Perfil da Empresa</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Não é apenas um mapa. É onde o cliente decide se confia em você pelas fotos, avaliações e horários. Se o seu horário estiver errado no Google, você perde uma venda antes do cliente sair de casa.</p>
+                    <ul class="space-y-2 text-sm text-gray-700 italic">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Cadastro no Google Maps</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Gestão de Avaliações</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 lesson-card">
+                    <h3 class="font-bold text-xl mb-3 text-blue-700">SEO Local (Busca Orgânica)</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Sabe por que o concorrente aparece primeiro? Ele usa as palavras certas na descrição. O Google lê textos, não mentes. Explicar seu serviço de forma técnica é o que te traz clientes grátis.</p>
+                    <ul class="space-y-2 text-sm text-gray-700 italic">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Palavras-chave do seu bairro</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Descrições técnicas de serviços</li>
                     </ul>
                 </div>
             </div>
+        </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-sm lesson-card transition duration-300">
-                <div class="text-green-600 text-3xl mb-4"><i class="fas fa-search"></i></div>
-                <h3 class="text-xl font-bold mb-3">SEO Local (Otimização para Busca)</h3>
-                <p class="text-gray-600 text-sm mb-4">
-                    SEO não é mágica, é técnica. É explicar para o robô do Google o que você faz.
-                </p>
-                <div class="bg-green-50 p-4 rounded-lg text-sm">
-                    <strong>A Estratégia:</strong>
-                    <p class="mt-2 text-gray-700">Não use apenas o nome da loja "Barbearia do João". Use termos de busca: "Barbearia do João - Cortes Modernos em [Nome do Bairro/Cidade]". Isso ajuda quem pesquisa pelo <em>serviço</em>, não apenas pelo nome.</p>
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">2</span>
+                <h2 class="text-3xl font-bold">Redes Sociais como Diretório</h2>
+            </div>
+            <div class="bg-blue-50 p-8 rounded-3xl">
+                <p class="mb-6 text-gray-700 font-medium">Muitos jovens donos de negócios postam fotos aleatórias. A estratégia correta é usar o Facebook e Instagram como <strong>Diretórios de Negócios</strong>.</p>
+                <div class="grid md:grid-cols-3 gap-6 text-sm">
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <i class="fab fa-instagram text-2xl text-pink-600 mb-2"></i>
+                        <p><strong>Bio de Conversão:</strong> Um link que funciona e uma promessa clara.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <i class="fab fa-facebook text-2xl text-blue-600 mb-2"></i>
+                        <p><strong>Página Completa:</strong> Endereço sincronizado e botões de chamada ativa.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm">
+                        <i class="fas fa-list text-2xl text-yellow-600 mb-2"></i>
+                        <p><strong>Catálogo:</strong> Exibir preços e produtos de forma organizada.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="py-16 px-4 bg-gray-100">
-        <div class="max-w-5xl mx-auto">
-            <div class="mb-12 border-l-4 border-purple-600 pl-4">
-                <h2 class="text-3xl font-bold text-gray-900">Módulo 2: Redes Sociais não são apenas para "Likes"</h2>
-                <p class="mt-2 text-gray-600">Instagram e Facebook funcionam como um catálogo dinâmico de confiança.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="fab fa-instagram text-pink-600"></i> Bio Estratégica</h4>
-                    <p class="text-sm text-gray-600">Sua biografia deve responder em 3 segundos: Quem é você, o que vende e onde fica. O link na bio deve levar direto para o WhatsApp ou localização.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="fab fa-facebook text-blue-700"></i> Informações Técnicas</h4>
-                    <p class="text-sm text-gray-600">Muitos erram aqui. O Facebook tem campos específicos para "Menu", "Serviços" e "Horários". Preencha tudo. O algoritmo gosta de perfis completos.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="fas fa-camera text-gray-700"></i> Conteúdo Real</h4>
-                    <p class="text-sm text-gray-600">Foto de banco de imagem não vende. Tire fotos do seu balcão, do seu processo, do cliente feliz. Isso gera conexão local.</p>
-                </div>
-            </div>
+        <div class="text-center bg-yellow-100 p-8 rounded-2xl border-2 border-yellow-200">
+            <h3 class="text-xl font-bold text-yellow-900 mb-2">O Segredo do Investimento</h3>
+            <p class="text-gray-800">Minha visão é: use ferramentas <strong>GRÁTIS</strong>. O único investimento inicial deve ser na minha <strong>CONSULTORIA</strong> para garantir que essas ferramentas estejam configuradas como uma máquina de vendas profissional.</p>
         </div>
-    </section>
+    </main>
 
-    <section class="py-16 px-4 max-w-5xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center gap-8">
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Módulo 3: Diretórios Locais</h2>
-                <p class="text-gray-600 mb-4">Existem sites que listam empresas da cidade. Estar lá aumenta sua autoridade.</p>
-                <p class="text-gray-600 text-sm">O Google cruza dados. Se seu telefone está de um jeito no Facebook e de outro num diretório local, sua relevância cai. A consistência dos dados (Nome, Endereço, Telefone) é fundamental.</p>
-            </div>
-            <div class="md:w-1/2 bg-yellow-50 border border-yellow-200 p-6 rounded-xl">
-                <h3 class="font-bold text-yellow-800 mb-2"><i class="fas fa-lightbulb"></i> Conclusão da Aula</h3>
-                <p class="text-sm text-gray-800 mb-4">Todas as ferramentas acima são <strong>gratuitas</strong>. O custo delas é o seu tempo de aprendizado e execução diária.</p>
-                <p class="text-sm text-gray-800 font-bold">Você tem dois caminhos agora:</p>
-                <ol class="list-decimal ml-5 text-sm mt-2 text-gray-700 space-y-2">
-                    <li>Aplicar tudo isso sozinho (o que é totalmente possível e eu encorajo).</li>
-                    <li>Contratar um especialista para configurar a base profissionalmente para você focar no balcão.</li>
-                </ol>
-            </div>
-        </div>
-    </section>
-
-    <section id="pacotes" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-        <div class="max-w-6xl mx-auto px-4">
+    <section class="py-20 bg-gray-900 text-white px-4">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Quer acelerar o processo?</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Minha consultoria serve para implementar profissionalmente tudo o que você aprendeu acima, garantindo que não haja erros técnicos.</p>
+                <h2 class="text-4xl font-bold mb-4">Escolha seu nível de presença</h2>
+                <p class="text-gray-400">Pague pela implementação profissional, não por mensalidades caras de software.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 text-gray-900">
-                
-                <div class="bg-gray-100 p-8 rounded-xl opacity-90 hover:opacity-100 transition">
-                    <h3 class="text-xl font-bold mb-2">Arranque Digital</h3>
-                    <p class="text-gray-500 mb-6 text-sm h-10">Para quem quer apenas a configuração correta das ferramentas gratuitas.</p>
-                    <div class="text-3xl font-bold mb-6">2.500 <span class="text-sm font-normal text-gray-500">MT (Único)</span></div>
-                    <ul class="mb-8 space-y-3 text-sm">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i> Cadastro Google Maps</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i> Bio Profissional Instagram</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i> Ajuste Página Facebook</li>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white text-gray-900 p-8 rounded-2xl shadow-xl flex flex-col">
+                    <h3 class="text-xl font-bold mb-1">Arranque Digital</h3>
+                    <p class="text-xs text-gray-500 mb-4 uppercase tracking-wider italic">Configuração & Melhoria</p>
+                    <div class="text-4xl font-bold mb-6 text-blue-600 font-mono">2.500 <span class="text-sm font-normal text-gray-400">MT</span></div>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow">
+                        <li><i class="fas fa-check text-blue-600"></i> Otimização Google Maps</li>
+                        <li><i class="fas fa-check text-blue-600"></i> Padronização Instagram/FB</li>
+                        <li><i class="fas fa-check text-blue-600"></i> Treinamento de SEO Básico</li>
                     </ul>
-                    <a href="#contato" class="block w-full text-center border-2 border-gray-400 py-2 rounded-lg hover:bg-white transition">Solicitar Este</a>
+                    <a href="#contato" class="text-center border-2 border-blue-600 text-blue-600 font-bold py-3 rounded-xl hover:bg-blue-50 transition">Escolher este</a>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-2xl transform md:-translate-y-4 border-4 border-blue-500 relative">
-                    <div class="absolute top-0 left-0 w-full bg-blue-500 text-white text-center text-xs font-bold py-1 rounded-t-lg">RECOMENDADO</div>
-                    <h3 class="text-xl font-bold mb-2 mt-2">Presença Ativa</h3>
-                    <p class="text-gray-500 mb-6 text-sm h-10">Sua empresa com um link profissional e estratégia de conteúdo.</p>
-                    <div class="text-3xl font-bold mb-6 text-blue-600">5.000 <span class="text-sm font-normal text-gray-500">MT (Único)</span></div>
-                    <ul class="mb-8 space-y-3 text-sm font-medium">
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> <strong>Tudo do Pacote Básico</strong></li>
-                        <li class="bg-blue-50 p-1 rounded"><i class="fas fa-check text-blue-600 mr-2"></i> Landing Page (Seu Link)</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Estratégia de Conteúdo (30 dias)</li>
-                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Suporte WhatsApp 15 dias</li>
+                <div class="bg-blue-600 text-white p-8 rounded-2xl shadow-2xl flex flex-col transform md:-translate-y-4 border-4 border-blue-400 relative">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full text-xs">MAIS PROCURADO</span>
+                    <h3 class="text-xl font-bold mb-1">Presença Ativa</h3>
+                    <p class="text-xs text-blue-200 mb-4 uppercase tracking-wider italic">Visibilidade + Landing Page</p>
+                    <div class="text-4xl font-bold mb-6 font-mono text-white">5.000 <span class="text-sm font-normal text-blue-200">MT</span></div>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow">
+                        <li><i class="fas fa-check text-yellow-400"></i> <strong>Tudo do Básico</strong></li>
+                        <li><i class="fas fa-check text-yellow-400"></i> Criação de Landing Page Própria</li>
+                        <li><i class="fas fa-check text-yellow-400"></i> Calendário de Conteúdo Organico</li>
                     </ul>
-                    <a href="#contato" class="block w-full text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition shadow-lg pulse-btn">QUERO ESTA OPÇÃO</a>
+                    <a href="#contato" class="text-center bg-white text-blue-600 font-bold py-3 rounded-xl shadow-lg hover:bg-gray-100 transition pulse-btn">QUERO ESTE PLANO</a>
                 </div>
 
-                <div class="bg-gray-100 p-8 rounded-xl opacity-90 hover:opacity-100 transition">
-                    <h3 class="text-xl font-bold mb-2">Aceleração Total</h3>
-                    <p class="text-gray-500 mb-6 text-sm h-10">Estrutura completa com site e tráfego pago.</p>
-                    <div class="text-3xl font-bold mb-6">12.500 <span class="text-sm font-normal text-gray-500">MT/Mês*</span></div>
-                    <ul class="mb-8 space-y-3 text-sm">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i> Website Profissional (.co.mz)</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i> Gestão de Anúncios Pagos</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i> Perfil Executivo LinkedIn</li>
-                        <li class="text-xs text-gray-400 mt-2">*Requer orçamento de anúncio à parte</li>
+                <div class="bg-white text-gray-900 p-8 rounded-2xl shadow-xl flex flex-col">
+                    <h3 class="text-xl font-bold mb-1">Aceleração Total</h3>
+                    <p class="text-xs text-gray-500 mb-4 uppercase tracking-wider italic">Escala e Tráfego Pago</p>
+                    <div class="text-4xl font-bold mb-6 text-blue-600 font-mono">12.500 <span class="text-sm font-normal text-gray-400">MT/Mês</span></div>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow">
+                        <li><i class="fas fa-check text-blue-600"></i> Website Profissional Completo</li>
+                        <li><i class="fas fa-check text-blue-600"></i> Gestão de Google & Meta Ads</li>
+                        <li><i class="fas fa-check text-blue-600"></i> Integração LinkedIn Profissional</li>
                     </ul>
-                    <a href="#contato" class="block w-full text-center border-2 border-gray-400 py-2 rounded-lg hover:bg-white transition">Solicitar Este</a>
+                    <a href="#contato" class="text-center border-2 border-gray-900 text-gray-900 font-bold py-3 rounded-xl hover:bg-gray-100 transition">Escolher este</a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="contato" class="py-16 px-4 bg-white">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-6">Pronto para profissionalizar?</h2>
-            <form class="space-y-4 text-left bg-gray-50 p-8 rounded-2xl shadow-inner border border-gray-200">
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Nome</label>
-                        <input type="text" class="w-full mt-1 p-2 border rounded-md outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">WhatsApp</label>
-                        <input type="text" class="w-full mt-1 p-2 border rounded-md outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
+    <section id="contato" class="py-20 px-4 bg-white">
+        <div class="max-w-xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold">Solicitar Consultoria</h2>
+                <p class="text-gray-500 mt-2">Você aprendeu como funciona. Agora escolha se quer fazer sozinho ou se quer que eu implemente para você.</p>
+            </div>
+            <form onsubmit="enviarParaWhatsApp(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700">Seu Nome</label>
+                    <input type="text" id="nome_cliente" required placeholder="Ex: João Silva" class="w-full mt-1 p-3 border rounded-xl outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-gray-700">Qual pacote te interessou?</label>
-                    <select class="w-full mt-1 p-2 border rounded-md outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="presenca-ativa">Presença Ativa (5.000 MT)</option>
-                        <option value="arranque">Arranque Digital (2.500 MT)</option>
-                        <option value="premium">Aceleração Total</option>
-                        <option value="duvida">Ainda tenho dúvidas sobre a aula</option>
+                    <label class="block text-sm font-bold text-gray-700">Plano de Interesse</label>
+                    <select id="interesse_cliente" class="w-full mt-1 p-3 border rounded-xl outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                        <option value="Presença Ativa (5.000 MT)">Presença Ativa (5.000 MT) - Recomendado</option>
+                        <option value="Arranque Digital (2.500 MT)">Arranque Digital (2.500 MT)</option>
+                        <option value="Aceleração Total">Aceleração Total (Premium)</option>
+                        <option value="Dúvida sobre a Aula">Apenas tirar uma dúvida sobre a aula</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 rounded-md hover:bg-green-700 transition">
-                    ENVIAR MENSAGEM
+                <button type="submit" class="w-full bg-green-600 text-white font-bold py-4 rounded-xl hover:bg-green-700 transition flex justify-center items-center gap-2 text-lg shadow-xl">
+                    <i class="fab fa-whatsapp"></i> FALAR COM O CONSULTOR
                 </button>
             </form>
         </div>
     </section>
-<script>
-    function enviarParaWhatsApp(event) {
-        event.preventDefault();
 
-        // --- ALTERE APENAS ESTA LINHA ABAIXO ---
-        var meuNumero = "25883988986"; // Seu número com 258 na frente
-        // --------------------------------------
-
-        var nome = document.getElementById('nome_cliente').value;
-        var interesse = document.getElementById('interesse_cliente').value;
-        
-        var mensagem = "Olá! Vi sua aula no Meu Negócio Online. Meu nome é " + nome + " e gostaria de saber mais sobre o pacote: " + interesse;
-        
-        var link = "https://api.whatsapp.com/send?phone=" + meuNumero + "&text=" + encodeURIComponent(mensagem);
-        
-        window.open(link, '_blank');
-    }
-</script>
-    <footer class="bg-gray-900 text-gray-400 py-12 px-4 border-t border-gray-800">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer class="bg-gray-100 py-12 px-4 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
-                <h4 class="text-white font-bold text-lg">Meu Negócio Online</h4>
-                <p class="text-sm mt-2">Repositório de estratégias digitais.</p>
-                <p class="text-xs mt-1">Empreendedorismo Moçambicano</p>
+                <p class="font-bold text-lg text-blue-900">Meu Negócio Online</p>
+                <p class="text-sm text-gray-500">Estratégias Reais para Empreendedores Reais.</p>
             </div>
             
-            <div class="flex flex-col items-center">
-                <span class="text-sm mb-2">Desenvolvido e Mantido por:</span>
-                <a href="https://www.linkedin.com/in/jmahumane" target="_blank" class="flex items-center gap-2 bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">
-                    <i class="fab fa-linkedin"></i> Falar com o Consultor
+            <div class="flex flex-col items-center gap-3">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">MKT Guy</span>
+                <a href="https://www.linkedin.com/in/SEU-PERFIL-AQUI" target="_blank" class="flex items-center gap-2 bg-blue-700 text-white px-8 py-3 rounded-full hover:bg-blue-800 transition shadow-md">
+                    <i class="fab fa-linkedin text-xl"></i> CONSULTOR
                 </a>
             </div>
         </div>
-        <div class="text-center text-xs mt-8 text-gray-600">
-            &copy; 2026 Meu Negócio Online. Todos os direitos reservados.
+        <div class="text-center mt-10 text-xs text-gray-400">
+            &copy; 2026 2GM Company. Estratégias de Marketing Digital.
         </div>
     </footer>
-</section>
+
+    <script>
+        function enviarParaWhatsApp(event) {
+            event.preventDefault();
+
+            // 1. ALTERE O NÚMERO ABAIXO (Mantenha o 258 para Moçambique)
+            var meuNumero = "258843988986"; 
+
+            // 2. Coleta os dados
+            var nome = document.getElementById('nome_cliente').value;
+            var interesse = document.getElementById('interesse_cliente').value;
+            
+            // 3. Formata a mensagem
+            var mensagem = "Olá! Vi sua aula no Meu Negócio Online. Meu nome é *" + nome + "* e escolhi o seguinte nível: *" + interesse + "*. Podemos conversar?";
+            
+            // 4. Executa o link
+            var link = "https://api.whatsapp.com/send?phone=" + meuNumero + "&text=" + encodeURIComponent(mensagem);
+            
+            window.open(link, '_blank');
+        }
+    </script>
 
 </body>
 </html>
