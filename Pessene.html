@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrenos Pessene - A Sua Casa Própria Começa Aqui</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .carousel-item { display: none; }
+        .carousel-item.active { display: block; }
+        .gradient-overlay { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%); }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-gray-50">
+
+    <header class="fixed w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-emerald-600">Pessene<span class="text-gray-800">Viva</span></div>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="#inicio" class="hover:text-emerald-600">Início</a>
+                <a href="#detalhes" class="hover:text-emerald-600">Detalhes</a>
+                <a href="#galeria" class="hover:text-emerald-600">Galeria</a>
+                <a href="#precos" class="hover:text-emerald-600">Preços</a>
+            </nav>
+            <a href="https://wa.me/258875509684" class="bg-emerald-500 text-white px-6 py-2 rounded-full font-bold hover:bg-emerald-600 transition">Contactar Agora</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div id="hero-carousel" class="absolute inset-0 z-0">
+            <img src="TC01.jpg" class="carousel-item active w-full h-full object-cover" alt="Terreno Pessene 1">
+            <img src="TC02.jpg" class="carousel-item w-full h-full object-cover" alt="Terreno Pessene 2">
+            <img src="TC03.jpg" class="carousel-item w-full h-full object-cover" alt="Terreno Pessene 3">
+            <div class="gradient-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 uppercase tracking-tight">O Teu Terreno em Pessene</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Dimensões de 20x40m, pronto para construir e com facilidades de pagamento únicas em Maputo.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#precos" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-lg transform hover:scale-105 transition">Entrada de 10.000 MT</a>
+                <a href="tel:+258846743280" class="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:bg-gray-100 transition">Ligar para Consultor</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="detalhes" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Porquê escolher estes espaços?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-6 border rounded-xl hover:shadow-xl transition">
+                    <i class="fas fa-map-marker-alt text-4xl text-emerald-500 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Localização</h3>
+                    <p class="text-gray-600">Pessene - EN4. Apenas 3 minutos da paragem principal.</p>
+                </div>
+                <div class="p-6 border rounded-xl hover:shadow-xl transition">
+                    <i class="fas fa-bolt text-4xl text-emerald-500 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Energia e Água</h3>
+                    <p class="text-gray-600">Infraestrutura disponível no local, pronta para ligação imediata.</p>
+                </div>
+                <div class="p-6 border rounded-xl hover:shadow-xl transition">
+                    <i class="fas fa-ruler-combined text-4xl text-emerald-500 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Dimensão 20x40</h3>
+                    <p class="text-gray-600">Espaço amplo (800m²) para a sua moradia, quintal e piscina.</p>
+                </div>
+                <div class="p-6 border rounded-xl hover:shadow-xl transition">
+                    <i class="fas fa-file-signature text-4xl text-emerald-500 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Documentação</h3>
+                    <p class="text-gray-600">Processo de transpasse transparente e seguro para sua paz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Espaços Disponíveis e Parcelados</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="TC04.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 4">
+                <img src="TC05.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 5">
+                <img src="TC06.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 6">
+                <img src="TC07.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 7">
+                <img src="TC08.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 8">
+                <img src="TC09.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 9">
+                <img src="TC10.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 10">
+                <img src="TC11.jpg" class="rounded-lg h-64 w-full object-cover shadow hover:opacity-90 cursor-pointer" alt="Imagem 11">
+            </div>
+        </div>
+    </section>
+
+    <section id="precos" class="py-20 bg-emerald-600 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl font-extrabold mb-6 italic">OFERTA LIMITADA!</h2>
+                <p class="text-2xl mb-4">Valor Total: <span class="font-bold underline text-yellow-300">60.000 MT</span></p>
+                <div class="bg-white/10 p-6 rounded-lg border-l-4 border-yellow-300">
+                    <p class="text-xl">Com apenas <span class="text-3xl font-bold text-yellow-300">10.000 MT</span> já garantimos o seu espaço.</p>
+                    <p class="mt-2 text-emerald-100">Pagamento facilitado em parcelas mensais.</p>
+                </div>
+            </div>
+            <div class="md:w-1/3 bg-white text-gray-900 p-8 rounded-2xl shadow-2xl">
+                <h3 class="text-2xl font-bold mb-6 text-center">Interessado? Deixe o seu contacto</h3>
+                <form action="mailto:trabalhocoragem8@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+                    <input type="text" name="Nome" placeholder="Seu Nome Completo" class="w-full p-3 border rounded-lg focus:outline-emerald-500" required>
+                    <input type="tel" name="Telefone" placeholder="Seu Telefone / WhatsApp" class="w-full p-3 border rounded-lg focus:outline-emerald-500" required>
+                    <button type="submit" class="w-full bg-emerald-500 text-white font-bold py-3 rounded-lg hover:bg-emerald-600 transition">SOLICITAR VISITA</button>
+                </form>
+                <p class="text-xs text-center text-gray-500 mt-4">Ou ligue para +258 875509684</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6 flex justify-center space-x-6">
+                <img src="TC13.jpg" class="w-12 h-12 rounded-full object-cover grayscale opacity-50" alt="TC13">
+                <img src="TC14.jpg" class="w-12 h-12 rounded-full object-cover grayscale opacity-50" alt="TC14">
+                <img src="TC15.jpg" class="w-12 h-12 rounded-full object-cover grayscale opacity-50" alt="TC15">
+            </div>
+            <p class="text-gray-400 mb-4">&copy; 2024 Venda de Terrenos Pessene. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://wa.me/258875509684" class="text-2xl hover:text-emerald-400"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:trabalhocoragem8@gmail.com" class="text-2xl hover:text-emerald-400"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let current = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        
+        function nextSlide() {
+            items[current].classList.remove('active');
+            current = (current + 1) % items.length;
+            items[current].classList.add('active');
+        }
+
+        setInterval(nextSlide, 4000); // Muda a cada 4 segundos
+    </script>
+</body>
+</html>
